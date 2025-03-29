@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { useAppContext } from '@/lib/app-context';
 import { saveFormData } from '@/lib/data-utils';
@@ -69,7 +68,6 @@ const SubmitForm = () => {
   const handleSelectChange = (name: string, value: string) => {
     setFormData(prev => ({ ...prev, [name]: value }));
 
-    // Reset season if category changes
     if (name === 'category') {
       setFormData(prev => ({ ...prev, season: '' }));
     }
@@ -88,7 +86,6 @@ const SubmitForm = () => {
   const handleAudioUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
-      // Check if the file is an audio file
       if (!file.type.startsWith('audio/')) {
         toast({
           title: 'Invalid File Type',
@@ -104,7 +101,6 @@ const SubmitForm = () => {
   const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
-      // Check if the file is an image
       if (!file.type.startsWith('image/')) {
         toast({
           title: 'Invalid File Type',
@@ -120,7 +116,6 @@ const SubmitForm = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Validate form
     if (!formData.title || !formData.category || !formData.season || !uploadedAudio) {
       toast({
         title: 'Missing Required Fields',
@@ -133,11 +128,9 @@ const SubmitForm = () => {
     setIsSubmitting(true);
 
     try {
-      // Create a timestamp ID for the submission
       const timestamp = new Date().toISOString().replace(/[-:.]/g, '');
       const uniqueId = `${formData.title.toLowerCase().replace(/\s+/g, '_')}_${timestamp}`;
       
-      // Prepare form data for submission
       const submissionData = {
         id: uniqueId,
         title: formData.title,
@@ -147,15 +140,10 @@ const SubmitForm = () => {
         description: formData.description || '',
         source: formData.source || '',
         wikiLink: formData.wikiLink || '',
-        audioFileName: uploadedAudio?.name || '',
-        imageFileName: uploadedImage?.name || '',
         submittedAt: new Date().toISOString(),
       };
-
-      // In a real application, we would upload the files to a server here
-      // For now, we'll just simulate a successful submission
       
-      const result = await saveFormData(submissionData);
+      const result = await saveFormData(submissionData, uploadedAudio, uploadedImage);
       
       if (result.success) {
         toast({
@@ -164,7 +152,6 @@ const SubmitForm = () => {
         });
         setIsSuccess(true);
         
-        // Reset form
         setTimeout(() => {
           setFormData({
             title: '',
@@ -195,7 +182,6 @@ const SubmitForm = () => {
     }
   };
 
-  // Get available seasons based on selected category
   const availableSeasons = data.categories
     .find(cat => cat.name === formData.category)
     ?.seasons.map(season => season.name) || [];
@@ -217,9 +203,8 @@ const SubmitForm = () => {
             </CardDescription>
           </CardHeader>
           
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} encType="multipart/form-data">
             <CardContent className="space-y-6">
-              {/* Title */}
               <div className="space-y-2">
                 <Label htmlFor="title">
                   Title <span className="text-destructive">*</span>
@@ -234,7 +219,6 @@ const SubmitForm = () => {
                 />
               </div>
               
-              {/* Category */}
               <div className="space-y-2">
                 <Label htmlFor="category">
                   Category <span className="text-destructive">*</span>
@@ -256,7 +240,6 @@ const SubmitForm = () => {
                 </Select>
               </div>
               
-              {/* Season */}
               <div className="space-y-2">
                 <Label htmlFor="season">
                   Season <span className="text-destructive">*</span>
@@ -279,7 +262,6 @@ const SubmitForm = () => {
                 </Select>
               </div>
               
-              {/* Tags */}
               <div className="space-y-2">
                 <Label>Tags</Label>
                 <div className="flex flex-wrap gap-2 mt-2">
@@ -298,7 +280,6 @@ const SubmitForm = () => {
                 </div>
               </div>
               
-              {/* Audio File Upload */}
               <div className="space-y-2">
                 <Label htmlFor="audio-upload">
                   Upload Sound File <span className="text-destructive">*</span>
@@ -326,7 +307,6 @@ const SubmitForm = () => {
                 </p>
               </div>
               
-              {/* Thumbnail Upload */}
               <div className="space-y-2">
                 <Label htmlFor="image-upload">Upload Thumbnail Image</Label>
                 <div className="flex items-center gap-4">
@@ -352,7 +332,6 @@ const SubmitForm = () => {
                 </p>
               </div>
               
-              {/* Description */}
               <div className="space-y-2">
                 <Label htmlFor="description">Description</Label>
                 <Textarea
@@ -365,7 +344,6 @@ const SubmitForm = () => {
                 />
               </div>
               
-              {/* Source */}
               <div className="space-y-2">
                 <Label htmlFor="source">Source</Label>
                 <Input
@@ -377,7 +355,6 @@ const SubmitForm = () => {
                 />
               </div>
               
-              {/* Wiki Link */}
               <div className="space-y-2">
                 <Label htmlFor="wikiLink">Wiki Link</Label>
                 <Input

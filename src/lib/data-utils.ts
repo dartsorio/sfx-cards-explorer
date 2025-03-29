@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { TokuData, Sound, Tag, FilterState, SoundFormData } from '@/types/types';
 import { toast } from '@/components/ui/use-toast';
@@ -76,21 +77,34 @@ export const extractTags = (sounds: Sound[]): Tag[] => {
 };
 
 // Function to save form data to a JSON file in the public/forms directory
-export const saveFormData = async (formData: any) => {
+export const saveFormData = async (formData: any, audioFile?: File, imageFile?: File) => {
   try {
-    const timestamp = new Date().toISOString().replace(/[-:.]/g, '');
-    const fileName = `form_${timestamp}.json`;
+    // Create a FormData object to send both form data and files
+    const formDataToSend = new FormData();
     
-    // Convert form data to JSON string
-    const jsonData = JSON.stringify(formData, null, 2);
+    // Add form fields
+    for (const key in formData) {
+      if (Array.isArray(formData[key])) {
+        // For arrays like tags, join them as a string and we'll parse on the server
+        formDataToSend.append(key, formData[key].join(','));
+      } else {
+        formDataToSend.append(key, formData[key]);
+      }
+    }
+    
+    // Add files if provided
+    if (audioFile) {
+      formDataToSend.append('audio', audioFile);
+    }
+    
+    if (imageFile) {
+      formDataToSend.append('image', imageFile);
+    }
     
     // Send the data to the server to save in the forms directory
     const response = await fetch('/api/save-form', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: jsonData,
+      body: formDataToSend, // No Content-Type header needed, browser will set it with boundary
     });
     
     if (!response.ok) {
@@ -98,9 +112,9 @@ export const saveFormData = async (formData: any) => {
     }
     
     const result = await response.json();
-    console.log('Form data saved as:', fileName);
+    console.log('Form data saved as:', result.fileName);
     
-    return { success: true, fileName };
+    return { success: true, fileName: result.fileName };
   } catch (error) {
     console.error('Error saving form data:', error);
     return { success: false, error: 'Failed to save form data' };
