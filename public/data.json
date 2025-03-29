@@ -1,0 +1,88 @@
+
+{
+  "categories": [
+    {
+      "name": "Kamen Rider",
+      "path": "/Kamen Rider",
+      "seasons": [
+        {
+          "name": "Kamen Rider",
+          "path": "/Kamen Rider/Kamen Rider",
+          "tags": []
+        },
+        {
+          "name": "Kamen Rider V3",
+          "path": "/Kamen Rider/Kamen Rider V3",
+          "tags": []
+        },
+        {
+          "name": "Kamen Rider Gavv",
+          "path": "/Kamen Rider/Kamen Rider Gavv",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "name": "Super Sentai",
+      "path": "/Super Sentai",
+      "seasons": [
+        {
+          "name": "Himitsu Sentai Gorenger",
+          "path": "/Super Sentai/Himitsu Sentai Gorenger",
+          "tags": []
+        },
+        {
+          "name": "Kaizoku Sentai Gokaiger",
+          "path": "/Super Sentai/Kaizoku Sentai Gokaiger",
+          "tags": []
+        }
+      ]
+    }
+  ],
+  "sounds": [
+    {
+      "id": "kamen_rider_valen_0",
+      "title": "Kamen Rider Valen",
+      "season": "Kamen Rider Gavv",
+      "category": "Kamen Rider",
+      "tags": [
+        "Henshin-Change"
+      ],
+      "path": "/sounds/kamen-rider/valennull.mp3",
+      "thumbnailPath": "/sounds/kamen-rider/valen2.png",
+      "description": "",
+      "source": "",
+      "wikiLink": ""
+    },
+    {
+      "id": "kamen_rider_bake_1",
+      "title": "Kamen Rider Bake",
+      "season": "Kamen Rider Gavv",
+      "category": "Kamen Rider",
+      "tags": [
+        "Henshin-Change",
+        "Villain"
+      ],
+      "path": "/sounds/kamen-rider/bakekr.mp3",
+      "thumbnailPath": "/sounds/kamen-rider/bake.jpg",
+      "description": "",
+      "source": "",
+      "wikiLink": ""
+    },
+    {
+      "id": "gokai_galleon_8",
+      "title": "Gokai Galleon",
+      "season": "Kaizoku Sentai Gokaiger",
+      "category": "Super Sentai",
+      "tags": [
+        "Mecha-Pets",
+        "Standby"
+      ],
+      "path": "/sounds/super-sentai/gokaig.mp3",
+      "thumbnailPath": "/sounds/super-sentai/gokaig.png",
+      "description": "",
+      "source": "",
+      "wikiLink": ""
+    }
+  ]
+}
