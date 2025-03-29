@@ -133,12 +133,22 @@ const SubmitForm = () => {
     setIsSubmitting(true);
 
     try {
+      // Create a timestamp ID for the submission
+      const timestamp = new Date().toISOString().replace(/[-:.]/g, '');
+      const uniqueId = `${formData.title.toLowerCase().replace(/\s+/g, '_')}_${timestamp}`;
+      
       // Prepare form data for submission
       const submissionData = {
-        ...formData,
+        id: uniqueId,
+        title: formData.title,
+        category: formData.category,
+        season: formData.season,
         tags: selectedTags,
-        audioFileName: uploadedAudio?.name,
-        imageFileName: uploadedImage?.name,
+        description: formData.description || '',
+        source: formData.source || '',
+        wikiLink: formData.wikiLink || '',
+        audioFileName: uploadedAudio?.name || '',
+        imageFileName: uploadedImage?.name || '',
         submittedAt: new Date().toISOString(),
       };
 
@@ -150,7 +160,7 @@ const SubmitForm = () => {
       if (result.success) {
         toast({
           title: 'Submission Successful',
-          description: 'Your sound has been submitted for review',
+          description: `Your sound has been submitted as ${result.fileName}`,
         });
         setIsSuccess(true);
         

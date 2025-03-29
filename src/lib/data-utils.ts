@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from 'react';
-import { TokuData, Sound, Tag, FilterState } from '@/types/types';
+import { TokuData, Sound, Tag, FilterState, SoundFormData } from '@/types/types';
 import { toast } from '@/components/ui/use-toast';
 
 // Function to load data from the data.json file
@@ -82,12 +82,27 @@ export const saveFormData = async (formData: any) => {
     const timestamp = new Date().toISOString().replace(/[-:.]/g, '');
     const fileName = `form_${timestamp}.json`;
     
-    // In a real application, this would send the data to a server
-    // For now, we'll simulate saving by logging to console
-    console.log('Saving form data:', fileName, formData);
+    // Convert form data to JSON string
+    const jsonData = JSON.stringify(formData, null, 2);
     
-    // In a real implementation, we would use a server-side API
-    // to save this data to the forms/ directory
+    // Create a Blob from the JSON string
+    const blob = new Blob([jsonData], { type: 'application/json' });
+    
+    // Create a downloadable link for the JSON file
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = fileName;
+    
+    // Trigger the download
+    document.body.appendChild(link);
+    link.click();
+    
+    // Clean up
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+    
+    console.log('Form data saved as:', fileName);
     
     return { success: true, fileName };
   } catch (error) {
