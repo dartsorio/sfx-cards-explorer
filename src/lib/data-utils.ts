@@ -108,7 +108,8 @@ export const saveFormData = async (formData: any, audioFile?: File, imageFile?: 
     });
     
     if (!response.ok) {
-      throw new Error('Failed to save form data');
+      const errorData = await response.json();
+      throw new Error(errorData.error || 'Failed to save form data');
     }
     
     const result = await response.json();
@@ -117,6 +118,6 @@ export const saveFormData = async (formData: any, audioFile?: File, imageFile?: 
     return { success: true, fileName: result.fileName };
   } catch (error) {
     console.error('Error saving form data:', error);
-    return { success: false, error: 'Failed to save form data' };
+    return { success: false, error: error instanceof Error ? error.message : 'Failed to save form data' };
   }
 };
