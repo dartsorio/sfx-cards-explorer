@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { TokuData, Sound, Tag, FilterState, SoundFormData } from '@/types/types';
 import { toast } from '@/components/ui/use-toast';
@@ -76,7 +75,7 @@ export const extractTags = (sounds: Sound[]): Tag[] => {
   return Array.from(tagsMap.entries()).map(([name, count]) => ({ name, count }));
 };
 
-// Function to save form data to a JSON file
+// Function to save form data to a JSON file in the public/forms directory
 export const saveFormData = async (formData: any) => {
   try {
     const timestamp = new Date().toISOString().replace(/[-:.]/g, '');
@@ -85,23 +84,20 @@ export const saveFormData = async (formData: any) => {
     // Convert form data to JSON string
     const jsonData = JSON.stringify(formData, null, 2);
     
-    // Create a Blob from the JSON string
-    const blob = new Blob([jsonData], { type: 'application/json' });
+    // Send the data to the server to save in the forms directory
+    const response = await fetch('/api/save-form', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: jsonData,
+    });
     
-    // Create a downloadable link for the JSON file
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = fileName;
+    if (!response.ok) {
+      throw new Error('Failed to save form data');
+    }
     
-    // Trigger the download
-    document.body.appendChild(link);
-    link.click();
-    
-    // Clean up
-    document.body.removeChild(link);
-    URL.revokeObjectURL(url);
-    
+    const result = await response.json();
     console.log('Form data saved as:', fileName);
     
     return { success: true, fileName };

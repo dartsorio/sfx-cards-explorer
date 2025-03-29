@@ -160,7 +160,7 @@ const SubmitForm = () => {
       if (result.success) {
         toast({
           title: 'Submission Successful',
-          description: `Your sound has been submitted as ${result.fileName}`,
+          description: 'Your sound has been submitted and saved to the forms directory',
         });
         setIsSuccess(true);
         
