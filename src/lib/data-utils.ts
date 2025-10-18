@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { TokuData, Sound, Tag, FilterState, SoundFormData } from '@/types/types';
 import { toast } from '@/components/ui/use-toast';
 
-// Function to load data from the data.json file
+// Function to load data from the PHP API (dynamic JSON files)
 export const useDataLoader = () => {
   const [data, setData] = useState<TokuData | null>(null);
   const [loading, setLoading] = useState(true);
@@ -12,10 +12,10 @@ export const useDataLoader = () => {
   useEffect(() => {
     const loadData = async () => {
       try {
-        // Fetch data from public/data.json
-        const response = await fetch('/data.json');
+        // Fetch data from PHP API that aggregates all validated JSON files
+        const response = await fetch('/api/get-sounds.php');
         if (!response.ok) {
-          throw new Error('Failed to load data.json');
+          throw new Error('Failed to load sounds from API');
         }
         const jsonData = await response.json();
         setData(jsonData);
@@ -76,7 +76,7 @@ export const extractTags = (sounds: Sound[]): Tag[] => {
   return Array.from(tagsMap.entries()).map(([name, count]) => ({ name, count }));
 };
 
-// Function to save form data to a JSON file in the public/forms directory
+// Function to submit sound via PHP (saves to submissions folder)
 export const saveFormData = async (formData: any, audioFile?: File, imageFile?: File) => {
   try {
     // Create a FormData object to send both form data and files
@@ -85,7 +85,7 @@ export const saveFormData = async (formData: any, audioFile?: File, imageFile?: 
     // Add form fields
     for (const key in formData) {
       if (Array.isArray(formData[key])) {
-        // For arrays like tags, join them as a string and we'll parse on the server
+        // For arrays like tags, join them as a string
         formDataToSend.append(key, formData[key].join(','));
       } else {
         formDataToSend.append(key, formData[key]);
@@ -101,23 +101,23 @@ export const saveFormData = async (formData: any, audioFile?: File, imageFile?: 
       formDataToSend.append('image', imageFile);
     }
     
-    // Send the data to the server to save in the forms directory
-    const response = await fetch('/api/save-form', {
+    // Send to PHP endpoint
+    const response = await fetch('/api/submit-sound.php', {
       method: 'POST',
-      body: formDataToSend, // No Content-Type header needed, browser will set it with boundary
+      body: formDataToSend,
     });
     
     if (!response.ok) {
       const errorData = await response.json();
-      throw new Error(errorData.error || 'Failed to save form data');
+      throw new Error(errorData.error || 'Failed to submit sound');
     }
     
     const result = await response.json();
-    console.log('Form data saved as:', result.fileName);
+    console.log('Sound submitted:', result.fileName);
     
     return { success: true, fileName: result.fileName };
   } catch (error) {
-    console.error('Error saving form data:', error);
-    return { success: false, error: error instanceof Error ? error.message : 'Failed to save form data' };
+    console.error('Error submitting sound:', error);
+    return { success: false, error: error instanceof Error ? error.message : 'Failed to submit sound' };
   }
 };
