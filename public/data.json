@@ -1,4 +1,3 @@
-
 {
   "categories": [
     {
@@ -13,6 +12,186 @@
         {
           "name": "Kamen Rider V3",
           "path": "/Kamen Rider/Kamen Rider V3",
+          "tags": []
+        },
+        {
+          "name": "Kamen Rider X",
+          "path": "/Kamen Rider/Kamen Rider X",
+          "tags": []
+        },
+        {
+          "name": "Kamen Rider Amazon",
+          "path": "/Kamen Rider/Kamen Rider Amazon",
+          "tags": []
+        },
+        {
+          "name": "Kamen Rider Stronger",
+          "path": "/Kamen Rider/Kamen Rider Stronger",
+          "tags": []
+        },
+        {
+          "name": "Kamen Rider Skyrider",
+          "path": "/Kamen Rider/Kamen Rider Skyrider",
+          "tags": []
+        },
+        {
+          "name": "Kamen Rider Super-1",
+          "path": "/Kamen Rider/Kamen Rider Super-1",
+          "tags": []
+        },
+        {
+          "name": "Kamen Rider Black",
+          "path": "/Kamen Rider/Kamen Rider Black",
+          "tags": []
+        },
+        {
+          "name": "Kamen Rider Black RX",
+          "path": "/Kamen Rider/Kamen Rider Black RX",
+          "tags": []
+        },
+        {
+          "name": "Kamen Rider Shin",
+          "path": "/Kamen Rider/Kamen Rider Shin",
+          "tags": []
+        },
+        {
+          "name": "Kamen Rider ZO",
+          "path": "/Kamen Rider/Kamen Rider ZO",
+          "tags": []
+        },
+        {
+          "name": "Kamen Rider J",
+          "path": "/Kamen Rider/Kamen Rider J",
+          "tags": []
+        },
+        {
+          "name": "Kamen Rider Kuuga",
+          "path": "/Kamen Rider/Kamen Rider Kuuga",
+          "tags": []
+        },
+        {
+          "name": "Kamen Rider Agito",
+          "path": "/Kamen Rider/Kamen Rider Agito",
+          "tags": []
+        },
+        {
+          "name": "Kamen Rider Ryuki",
+          "path": "/Kamen Rider/Kamen Rider Ryuki",
+          "tags": []
+        },
+        {
+          "name": "Kamen Rider 555",
+          "path": "/Kamen Rider/Kamen Rider 555",
+          "tags": []
+        },
+        {
+          "name": "Kamen Rider Blade",
+          "path": "/Kamen Rider/Kamen Rider Blade",
+          "tags": []
+        },
+        {
+          "name": "Kamen Rider Hibiki",
+          "path": "/Kamen Rider/Kamen Rider Hibiki",
+          "tags": []
+        },
+        {
+          "name": "Kamen Rider Kabuto",
+          "path": "/Kamen Rider/Kamen Rider Kabuto",
+          "tags": []
+        },
+        {
+          "name": "Kamen Rider Den-O",
+          "path": "/Kamen Rider/Kamen Rider Den-O",
+          "tags": []
+        },
+        {
+          "name": "Kamen Rider Kiva",
+          "path": "/Kamen Rider/Kamen Rider Kiva",
+          "tags": []
+        },
+        {
+          "name": "Kamen Rider Decade",
+          "path": "/Kamen Rider/Kamen Rider Decade",
+          "tags": []
+        },
+        {
+          "name": "Kamen Rider W",
+          "path": "/Kamen Rider/Kamen Rider W",
+          "tags": []
+        },
+        {
+          "name": "Kamen Rider OOO",
+          "path": "/Kamen Rider/Kamen Rider OOO",
+          "tags": []
+        },
+        {
+          "name": "Kamen Rider Fourze",
+          "path": "/Kamen Rider/Kamen Rider Fourze",
+          "tags": []
+        },
+        {
+          "name": "Kamen Rider Wizard",
+          "path": "/Kamen Rider/Kamen Rider Wizard",
+          "tags": []
+        },
+        {
+          "name": "Kamen Rider Gaim",
+          "path": "/Kamen Rider/Kamen Rider Gaim",
+          "tags": []
+        },
+        {
+          "name": "Kamen Rider Drive",
+          "path": "/Kamen Rider/Kamen Rider Drive",
+          "tags": []
+        },
+        {
+          "name": "Kamen Rider Ghost",
+          "path": "/Kamen Rider/Kamen Rider Ghost",
+          "tags": []
+        },
+        {
+          "name": "Kamen Rider Ex-Aid",
+          "path": "/Kamen Rider/Kamen Rider Ex-Aid",
+          "tags": []
+        },
+        {
+          "name": "Kamen Rider Build",
+          "path": "/Kamen Rider/Kamen Rider Build",
+          "tags": []
+        },
+        {
+          "name": "Kamen Rider Zi-O",
+          "path": "/Kamen Rider/Kamen Rider Zi-O",
+          "tags": []
+        },
+        {
+          "name": "Kamen Rider Saber",
+          "path": "/Kamen Rider/Kamen Rider Saber",
+          "tags": []
+        },
+        {
+          "name": "Kamen Rider Revice",
+          "path": "/Kamen Rider/Kamen Rider Revice",
+          "tags": []
+        },
+        {
+          "name": "Kamen Rider Geats",
+          "path": "/Kamen Rider/Kamen Rider Geats",
+          "tags": []
+        },
+        {
+          "name": "Kamen Rider Shinobu",
+          "path": "/Kamen Rider/Kamen Rider Shinobu",
+          "tags": []
+        },
+        {
+          "name": "Kamen Rider Outsiders",
+          "path": "/Kamen Rider/Kamen Rider Outsiders",
+          "tags": []
+        },
+        {
+          "name": "Kamen Rider Gotchard",
+          "path": "/Kamen Rider/Kamen Rider Gotchard",
           "tags": []
         },
         {
@@ -32,8 +211,243 @@
           "tags": []
         },
         {
+          "name": "J.A.K.Q. Dengekitai",
+          "path": "/Super Sentai/J.A.K.Q. Dengekitai",
+          "tags": []
+        },
+        {
+          "name": "Battle Fever J",
+          "path": "/Super Sentai/Battle Fever J",
+          "tags": []
+        },
+        {
+          "name": "Denshi Sentai Denziman",
+          "path": "/Super Sentai/Denshi Sentai Denziman",
+          "tags": []
+        },
+        {
+          "name": "Taiyo Sentai Sun Vulcan",
+          "path": "/Super Sentai/Taiyo Sentai Sun Vulcan",
+          "tags": []
+        },
+        {
+          "name": "Dai Sentai Goggle V",
+          "path": "/Super Sentai/Dai Sentai Goggle V",
+          "tags": []
+        },
+        {
+          "name": "Kagaku Sentai Dynaman",
+          "path": "/Super Sentai/Kagaku Sentai Dynaman",
+          "tags": []
+        },
+        {
+          "name": "Choudenshi Bioman",
+          "path": "/Super Sentai/Choudenshi Bioman",
+          "tags": []
+        },
+        {
+          "name": "Dengeki Sentai Changeman",
+          "path": "/Super Sentai/Dengeki Sentai Changeman",
+          "tags": []
+        },
+        {
+          "name": "Choushinsei Flashman",
+          "path": "/Super Sentai/Choushinsei Flashman",
+          "tags": []
+        },
+        {
+          "name": "Hikari Sentai Maskman",
+          "path": "/Super Sentai/Hikari Sentai Maskman",
+          "tags": []
+        },
+        {
+          "name": "Choujuu Sentai Liveman",
+          "path": "/Super Sentai/Choujuu Sentai Liveman",
+          "tags": []
+        },
+        {
+          "name": "Kousoku Sentai Turboranger",
+          "path": "/Super Sentai/Kousoku Sentai Turboranger",
+          "tags": []
+        },
+        {
+          "name": "Chikyu Sentai Fiveman",
+          "path": "/Super Sentai/Chikyu Sentai Fiveman",
+          "tags": []
+        },
+        {
+          "name": "Choujin Sentai Jetman",
+          "path": "/Super Sentai/Choujin Sentai Jetman",
+          "tags": []
+        },
+        {
+          "name": "Kyoryu Sentai Zyuranger",
+          "path": "/Super Sentai/Kyoryu Sentai Zyuranger",
+          "tags": []
+        },
+        {
+          "name": "Gosei Sentai Dairanger",
+          "path": "/Super Sentai/Gosei Sentai Dairanger",
+          "tags": []
+        },
+        {
+          "name": "Ninja Sentai Kakuranger",
+          "path": "/Super Sentai/Ninja Sentai Kakuranger",
+          "tags": []
+        },
+        {
+          "name": "Chouriki Sentai Ohranger",
+          "path": "/Super Sentai/Chouriki Sentai Ohranger",
+          "tags": []
+        },
+        {
+          "name": "Gekisou Sentai Carranger",
+          "path": "/Super Sentai/Gekisou Sentai Carranger",
+          "tags": []
+        },
+        {
+          "name": "Denji Sentai Megaranger",
+          "path": "/Super Sentai/Denji Sentai Megaranger",
+          "tags": []
+        },
+        {
+          "name": "Seijuu Sentai Gingaman",
+          "path": "/Super Sentai/Seijuu Sentai Gingaman",
+          "tags": []
+        },
+        {
+          "name": "Kyuukyuu Sentai GoGoFive",
+          "path": "/Super Sentai/Kyuukyuu Sentai GoGoFive",
+          "tags": []
+        },
+        {
+          "name": "Mirai Sentai Timeranger",
+          "path": "/Super Sentai/Mirai Sentai Timeranger",
+          "tags": []
+        },
+        {
+          "name": "Hyakujuu Sentai Gaoranger",
+          "path": "/Super Sentai/Hyakujuu Sentai Gaoranger",
+          "tags": []
+        },
+        {
+          "name": "Ninpuu Sentai Hurricaneger",
+          "path": "/Super Sentai/Ninpuu Sentai Hurricaneger",
+          "tags": []
+        },
+        {
+          "name": "Bakuryuu Sentai Abaranger",
+          "path": "/Super Sentai/Bakuryuu Sentai Abaranger",
+          "tags": []
+        },
+        {
+          "name": "Tokusou Sentai Dekaranger",
+          "path": "/Super Sentai/Tokusou Sentai Dekaranger",
+          "tags": []
+        },
+        {
+          "name": "Mahou Sentai Magiranger",
+          "path": "/Super Sentai/Mahou Sentai Magiranger",
+          "tags": []
+        },
+        {
+          "name": "GoGo Sentai Boukenger",
+          "path": "/Super Sentai/GoGo Sentai Boukenger",
+          "tags": []
+        },
+        {
+          "name": "Juken Sentai Gekiranger",
+          "path": "/Super Sentai/Juken Sentai Gekiranger",
+          "tags": []
+        },
+        {
+          "name": "Engine Sentai Go-onger",
+          "path": "/Super Sentai/Engine Sentai Go-onger",
+          "tags": []
+        },
+        {
+          "name": "Samurai Sentai Shinkenger",
+          "path": "/Super Sentai/Samurai Sentai Shinkenger",
+          "tags": []
+        },
+        {
+          "name": "Tensou Sentai Goseiger",
+          "path": "/Super Sentai/Tensou Sentai Goseiger",
+          "tags": []
+        },
+        {
           "name": "Kaizoku Sentai Gokaiger",
           "path": "/Super Sentai/Kaizoku Sentai Gokaiger",
+          "tags": []
+        },
+        {
+          "name": "Tokumei Sentai Go-Busters",
+          "path": "/Super Sentai/Tokumei Sentai Go-Busters",
+          "tags": []
+        },
+        {
+          "name": "Zyuden Sentai Kyoryuger",
+          "path": "/Super Sentai/Zyuden Sentai Kyoryuger",
+          "tags": []
+        },
+        {
+          "name": "Ressha Sentai ToQger",
+          "path": "/Super Sentai/Ressha Sentai ToQger",
+          "tags": []
+        },
+        {
+          "name": "Shuriken Sentai Ninninger",
+          "path": "/Super Sentai/Shuriken Sentai Ninninger",
+          "tags": []
+        },
+        {
+          "name": "Doubutsu Sentai Zyuohger",
+          "path": "/Super Sentai/Doubutsu Sentai Zyuohger",
+          "tags": []
+        },
+        {
+          "name": "Uchu Sentai Kyuranger",
+          "path": "/Super Sentai/Uchu Sentai Kyuranger",
+          "tags": []
+        },
+        {
+          "name": "Kaito Sentai Lupinranger VS Keisatsu Sentai Patranger",
+          "path": "/Super Sentai/Kaito Sentai Lupinranger VS Keisatsu Sentai Patranger",
+          "tags": []
+        },
+        {
+          "name": "Kishiryu Sentai Ryusoulger",
+          "path": "/Super Sentai/Kishiryu Sentai Ryusoulger",
+          "tags": []
+        },
+        {
+          "name": "Mashin Sentai Kiramager",
+          "path": "/Super Sentai/Mashin Sentai Kiramager",
+          "tags": []
+        },
+        {
+          "name": "Kikai Sentai Zenkaiger",
+          "path": "/Super Sentai/Kikai Sentai Zenkaiger",
+          "tags": []
+        },
+        {
+          "name": "Avataro Sentai Donbrothers",
+          "path": "/Super Sentai/Avataro Sentai Donbrothers",
+          "tags": []
+        },
+        {
+          "name": "Ohsama Sentai Kingohger",
+          "path": "/Super Sentai/Ohsama Sentai Kingohger",
+          "tags": []
+        },
+        {
+          "name": "Bakuage Sentai Boonboomger",
+          "path": "/Super Sentai/Bakuage Sentai Boonboomger",
+          "tags": []
+        },
+        {
+          "name": "Hikōnin Sentai Akibaranger",
+          "path": "/Super Sentai/Hikōnin Sentai Akibaranger",
           "tags": []
         }
       ]
@@ -70,6 +484,93 @@
       "wikiLink": ""
     },
     {
+      "id": "bushel_valen_2",
+      "title": "Bushel Valen",
+      "season": "Kamen Rider Gavv",
+      "category": "Kamen Rider",
+      "tags": [
+        "Henshin-Change"
+      ],
+      "path": "/sounds/kamen-rider/bushelvalen.mp3",
+      "thumbnailPath": "/sounds/kamen-rider/kamen_rider_valen_bushel_form_render_by_neorider217_dijmiz9-pre.png",
+      "description": "",
+      "source": "",
+      "wikiLink": ""
+    },
+    {
+      "id": "kamen_rider_valen_domaru_3",
+      "title": "Kamen Rider Valen Domaru",
+      "season": "Kamen Rider Gavv",
+      "category": "Kamen Rider",
+      "tags": [
+        "Henshin-Change"
+      ],
+      "path": "/sounds/kamen-rider/valendonut.mp3",
+      "thumbnailPath": "/sounds/kamen-rider/domau.png",
+      "description": "",
+      "source": "",
+      "wikiLink": ""
+    },
+    {
+      "id": "kamen_rider_valen_standby_4",
+      "title": "Kamen Rider Valen Standby",
+      "season": "Kamen Rider Gavv",
+      "category": "Kamen Rider",
+      "tags": [
+        "Henshin-Change",
+        "Standby"
+      ],
+      "path": "/sounds/kamen-rider/チョコの冷凍漬け.mp3",
+      "thumbnailPath": "/sounds/kamen-rider/valen.png",
+      "description": "",
+      "source": "",
+      "wikiLink": ""
+    },
+    {
+      "id": "kamen_rider_genm_hyper_fumetsu_gamer_5",
+      "title": "Kamen Rider Genm Hyper Fumetsu Gamer",
+      "season": "Kamen Rider Outsiders",
+      "category": "Kamen Rider",
+      "tags": [
+        "Henshin-Change",
+        "Villain"
+      ],
+      "path": "/sounds/kamen-rider/めちゃくちゃ頑張ったから聞いて.mp3",
+      "thumbnailPath": "/sounds/kamen-rider/13b8ebb9b1d83919afaed037d832696d6c4a1d30r1-682-682v2_uhq.jpg",
+      "description": "",
+      "source": "",
+      "wikiLink": ""
+    },
+    {
+      "id": "dooms_geats_6",
+      "title": "Dooms Geats",
+      "season": "Kamen Rider Geats",
+      "category": "Kamen Rider",
+      "tags": [
+        "Henshin-Change"
+      ],
+      "path": "/sounds/kamen-rider/dooms.mp3",
+      "thumbnailPath": "/sounds/kamen-rider/dooms.png",
+      "description": "",
+      "source": "",
+      "wikiLink": ""
+    },
+    {
+      "id": "cross_geats_7",
+      "title": "Cross Geats",
+      "season": "Kamen Rider Geats",
+      "category": "Kamen Rider",
+      "tags": [
+        "Henshin-Change",
+        "Villain"
+      ],
+      "path": "/sounds/kamen-rider/crossgeats.mp3",
+      "thumbnailPath": "/sounds/kamen-rider/geatscroos.png",
+      "description": "",
+      "source": "",
+      "wikiLink": ""
+    },
+    {
       "id": "gokai_galleon_8",
       "title": "Gokai Galleon",
       "season": "Kaizoku Sentai Gokaiger",
@@ -80,6 +581,418 @@
       ],
       "path": "/sounds/super-sentai/gokaig.mp3",
       "thumbnailPath": "/sounds/super-sentai/gokaig.png",
+      "description": "",
+      "source": "",
+      "wikiLink": ""
+    },
+    {
+      "id": "bloody_rose_alarm_9",
+      "title": "Bloody Rose Alarm",
+      "season": "Kamen Rider Kiva",
+      "category": "Kamen Rider",
+      "tags": [
+        "Misc-Gimmick-Object",
+        "Standby"
+      ],
+      "path": "/sounds/kamen-rider/bloody.mp3",
+      "thumbnailPath": "/sounds/kamen-rider/bloddy.png",
+      "description": "",
+      "source": "",
+      "wikiLink": ""
+    },
+    {
+      "id": "rabbittank_sparkling_20250328063533",
+      "title": "RabbitTank Sparkling",
+      "category": "Kamen Rider",
+      "season": "Kamen Rider Build",
+      "tags": [
+        "Henshin-Change"
+      ],
+      "path": "/sounds/kamen-rider/buildsparking.mp3",
+      "thumbnailPath": "/sounds/kamen-rider/5_13472_o_1h6sdkuvoumq1qufm0o1hpt15nb57.jpg",
+      "description": "",
+      "source": "",
+      "wikiLink": ""
+    },
+    {
+      "id": "gokai_galleon_buster_20250328070810",
+      "title": "Gokai Galleon Buster",
+      "category": "Super Sentai",
+      "season": "Kaizoku Sentai Gokaiger",
+      "tags": [
+        "Misc-Gimmick-Object"
+      ],
+      "path": "/sounds/super-sentai/gokai galleon buster sfx.wav",
+      "thumbnailPath": "/sounds/super-sentai/FBOmrgKUcAIj5Qj.jpg",
+      "description": "",
+      "source": "",
+      "wikiLink": ""
+    },
+    {
+      "id": "spider_phone_20250328074018",
+      "title": "Spider Phone",
+      "category": "Kamen Rider",
+      "season": "Kamen Rider Geats",
+      "tags": [
+        "Misc-Gimmick-Object",
+        "Standby"
+      ],
+      "path": "/sounds/kamen-rider/HxFv6Grh7fYtmExTZ3gQQQLw8MLJ1suZ.mp3",
+      "thumbnailPath": "/sounds/kamen-rider/spider.jpg",
+      "description": "",
+      "source": "",
+      "wikiLink": ""
+    },
+    {
+      "id": "lupin_ranger_20250328181631",
+      "title": "Lupin Ranger",
+      "category": "Super Sentai",
+      "season": "Kaito Sentai Lupinranger VS Keisatsu Sentai Patranger",
+      "tags": [
+        "Henshin-Change"
+      ],
+      "path": "/sounds/super-sentai/LupinRanger.mp3",
+      "thumbnailPath": "/sounds/super-sentai/LUPIN.png",
+      "description": "",
+      "source": "",
+      "wikiLink": ""
+    },
+    {
+      "id": "lupin_x_20250328181729",
+      "title": "Lupin X",
+      "category": "Super Sentai",
+      "season": "Kaito Sentai Lupinranger VS Keisatsu Sentai Patranger",
+      "tags": [
+        "Henshin-Change"
+      ],
+      "path": "/sounds/super-sentai/Lupin X.mp3",
+      "thumbnailPath": "/sounds/super-sentai/Lupinranger-vs-Patanger-Lupinrangers-Lupin-X.jpg",
+      "description": "",
+      "source": "",
+      "wikiLink": ""
+    },
+    {
+      "id": "victory_striker_20250328181853",
+      "title": "Victory Striker",
+      "category": "Super Sentai",
+      "season": "Kaito Sentai Lupinranger VS Keisatsu Sentai Patranger",
+      "tags": [
+        "Henshin-Change"
+      ],
+      "path": "/sounds/super-sentai/Victory STRIKER.mp3",
+      "thumbnailPath": "/sounds/super-sentai/Lupinranger-vs-Patanger-Lupinrangers-Lupin-X.jpg",
+      "description": "",
+      "source": "",
+      "wikiLink": ""
+    },
+    {
+      "id": "fire_squad_20250328182725",
+      "title": "Fire Squad",
+      "category": "Super Sentai",
+      "season": "Tokusou Sentai Dekaranger",
+      "tags": [
+        "Henshin-Change"
+      ],
+      "path": "/sounds/super-sentai/spdpatrtol.mp3",
+      "thumbnailPath": "/sounds/super-sentai/Capture d'écran 2025-03-28 182548.png",
+      "description": "",
+      "source": "",
+      "wikiLink": ""
+    },
+    {
+      "id": "kamen_rider_zein_20250329124922",
+      "title": "Kamen Rider Zein",
+      "category": "Kamen Rider",
+      "season": "Kamen Rider Outsiders",
+      "tags": [
+        "Henshin-Change"
+      ],
+      "path": "/sounds/kamen-rider/zein.mp3",
+      "thumbnailPath": "/sounds/kamen-rider/f03c296f2e86ff90f1053beba9c2e1e4.jpg",
+      "description": "",
+      "source": "",
+      "wikiLink": ""
+    },
+    {
+      "id": "w_xtreme__ridewatch_20250329125205",
+      "title": "W Xtreme  RideWatch",
+      "category": "Kamen Rider",
+      "season": "Kamen Rider Zi-O",
+      "tags": [
+        "Henshin-Change"
+      ],
+      "path": "/sounds/kamen-rider/extreame.mp3",
+      "thumbnailPath": "/sounds/kamen-rider/s-l1200.jpg",
+      "description": "",
+      "source": "",
+      "wikiLink": ""
+    },
+    {
+      "id": "kamen_rider_geats_qb9_x_20250329125651",
+      "title": "Kamen Rider Geats QB9 X",
+      "category": "Kamen Rider",
+      "season": "Kamen Rider Geats",
+      "tags": [
+        "Henshin-Change"
+      ],
+      "path": "/sounds/kamen-rider/qb9.mp3",
+      "thumbnailPath": "/sounds/kamen-rider/qb9.png",
+      "description": "",
+      "source": "",
+      "wikiLink": ""
+    },
+    {
+      "id": "gokai_change_20250329150644",
+      "title": "Gokai Change",
+      "category": "Super Sentai",
+      "season": "Kaizoku Sentai Gokaiger",
+      "tags": [
+        "Henshin-Change"
+      ],
+      "path": "/sounds/super-sentai/jo.mp3",
+      "thumbnailPath": "/sounds/super-sentai/Gokaiger.jpg",
+      "description": "",
+      "source": "",
+      "wikiLink": ""
+    },
+    {
+      "id": "kiramei_change_20250329150827",
+      "title": "Kiramei Change",
+      "category": "Super Sentai",
+      "season": "Mashin Sentai Kiramager",
+      "tags": [
+        "Henshin-Change"
+      ],
+      "path": "/sounds/super-sentai/魔進戦隊キラメイジャー 変身音 ＂Mashin Sentai Kiramager Henshin Sound＂ V2.mp3",
+      "thumbnailPath": "/sounds/super-sentai/魔進戦隊キラメイジャー 変身音 _Mashin Sentai Kiramager Henshin Sound_ V2 0-17 screenshot.png",
+      "description": "",
+      "source": "",
+      "wikiLink": ""
+    },
+    {
+      "id": "agito_ridewatch_20250409204512",
+      "title": "Agito RideWatch",
+      "category": "Kamen Rider",
+      "season": "Kamen Rider Zi-O",
+      "tags": [
+        "Henshin-Change"
+      ],
+      "path": "/sounds/kamen-rider/agito.mp3",
+      "thumbnailPath": "/sounds/kamen-rider/agito.jpg",
+      "description": "",
+      "source": "",
+      "wikiLink": ""
+    },
+    {
+      "id": "gashat_wizard_20250409205516",
+      "title": "Gashat Wizard",
+      "category": "Kamen Rider",
+      "season": "Kamen Rider Ex-Aid",
+      "tags": [
+        "Henshin-Change"
+      ],
+      "path": "/sounds/kamen-rider/wizardgs.mp3",
+      "thumbnailPath": "/sounds/kamen-rider/dd.jpg",
+      "description": "",
+      "source": "",
+      "wikiLink": ""
+    },
+    {
+      "id": "wizard_bottle_(diamond_&_mahou)_20250409210104",
+      "title": "Wizard Bottle (Diamond & Mahou)",
+      "category": "Kamen Rider",
+      "season": "Kamen Rider Build",
+      "tags": [
+        "Henshin-Change"
+      ],
+      "path": "/sounds/kamen-rider/魔法(物理).mp3",
+      "thumbnailPath": "/sounds/kamen-rider/魔法(物理) 0-28 screenshot.png",
+      "description": "",
+      "source": "",
+      "wikiLink": ""
+    },
+    {
+      "id": "kamen_rider_frappe__20250409210459",
+      "title": "Kamen Rider Frappe ",
+      "category": "Kamen Rider",
+      "season": "Kamen Rider Gavv",
+      "tags": [
+        "Henshin-Change"
+      ],
+      "path": "/sounds/kamen-rider/[最高音質] フラッペいずゴチゾウ 変身待機音   Frappeis Gochizo Henshin standby sou.mp3",
+      "thumbnailPath": "/sounds/kamen-rider/hq720.jpg",
+      "description": "",
+      "source": "",
+      "wikiLink": ""
+    },
+    {
+      "id": "kamen_rider_fuma_ninjyagamer_20250409210856",
+      "title": "Kamen rider Fuma NinjyaGamer",
+      "category": "Kamen Rider",
+      "season": "Kamen Rider Ex-Aid",
+      "tags": [
+        "Henshin-Change"
+      ],
+      "path": "/sounds/kamen-rider/仮面ライダー風魔 ニンジャゲーマー 変身音+α Kamen rider Fuma NinjyaGamer henshin .mp3",
+      "thumbnailPath": "/sounds/kamen-rider/仮面ライダー風魔 ニンジャゲーマー 変身音+α Kamen rider Fuma NinjyaGamer henshin sound+α 0-6 screenshot.png",
+      "description": "",
+      "source": "",
+      "wikiLink": ""
+    },
+    {
+      "id": "bittergavv_20250409211710",
+      "title": "BitterGavv",
+      "category": "Kamen Rider",
+      "season": "Kamen Rider Gavv",
+      "tags": [
+        "Henshin-Change",
+        "Standby"
+      ],
+      "path": "/sounds/kamen-rider/ビター待機音インスト(最速版).mp3",
+      "thumbnailPath": "/sounds/kamen-rider/ビター待機音インスト(最速版)_maxresdefault.jpg",
+      "description": "",
+      "source": "",
+      "wikiLink": ""
+    },
+    {
+      "id": "kamen_rider_vram__20250409213736",
+      "title": "Kamen Rider Vram ",
+      "category": "Kamen Rider",
+      "season": "Kamen Rider",
+      "tags": [
+        "Henshin-Change"
+      ],
+      "path": "/sounds/kamen-rider/[現状最高音質] 仮面ライダーヴラム プリンカスタム 変身音 KamenRider Vram Pud.mp3",
+      "thumbnailPath": "/sounds/kamen-rider/[現状最高音質] 仮面ライダーヴラム プリンカスタム 変身音 KamenRider Vram PuddingCustom Henshin Sound [HQ] 0-4 screenshot.png",
+      "description": "",
+      "source": "",
+      "wikiLink": ""
+    },
+    {
+      "id": "vram_standby_20250409213944",
+      "title": "Vram STANDBY",
+      "category": "Kamen Rider",
+      "season": "Kamen Rider Gavv",
+      "tags": [
+        "Henshin-Change",
+        "Standby"
+      ],
+      "path": "/sounds/kamen-rider/[最高音質] ヴラスタムギア 変身待機音  VrastumGear Henshin standby sound [HQ].mp3",
+      "thumbnailPath": "/sounds/kamen-rider/[最高音質] ヴラスタムギア 変身待機音  VrastumGear Henshin standby sound [HQ] 0-55 screenshot.png",
+      "description": "",
+      "source": "",
+      "wikiLink": ""
+    },
+    {
+      "id": "zein_grand_zi-o_20250409214246",
+      "title": "Zein Grand Zi-o",
+      "category": "Kamen Rider",
+      "season": "Kamen Rider Outsiders",
+      "tags": [
+        "Henshin-Change"
+      ],
+      "path": "/sounds/kamen-rider/Justice order  -GRANDZI-O-.mp3",
+      "thumbnailPath": "/sounds/kamen-rider/Justice order  -GRANDZI-O- 0-1 screenshot.png",
+      "description": "",
+      "source": "",
+      "wikiLink": ""
+    },
+    {
+      "id": "laser_raise_driver_20250409215446",
+      "title": "Laser Raise driver",
+      "category": "Kamen Rider",
+      "season": "Kamen Rider Outsiders",
+      "tags": [
+        "Henshin-Change"
+      ],
+      "path": "/sounds/kamen-rider/[最高音質] レーザーレイズドライバー 変身待機音　Laser Raise driver henshin sta.mp3",
+      "thumbnailPath": "/sounds/kamen-rider/[最高音質] レーザーレイズドライバー 変身待機音　Laser Raise driver henshin standby sound [HQ] 0-4 screenshot.png",
+      "description": "",
+      "source": "",
+      "wikiLink": ""
+    },
+    {
+      "id": "caking_form_20250409215835",
+      "title": "Caking Form Finisher",
+      "category": "Kamen Rider",
+      "season": "Kamen Rider Gavv",
+      "tags": [
+        "Henshin-Change"
+      ],
+      "path": "/sounds/kamen-rider/[現状最高音質] ガヴホイッピア 必殺待機音 Gavv Whipier finisher standby sound [HQ].mp3",
+      "thumbnailPath": "/sounds/kamen-rider/[現状最高音質] ガヴホイッピア 必殺待機音 Gavv Whipier finisher standby sound [HQ] 0-2 screenshot.png",
+      "description": "",
+      "source": "",
+      "wikiLink": ""
+    },
+    {
+      "id": "caking_form_standby_20250409221648",
+      "title": "Caking Form StandBy",
+      "category": "Kamen Rider",
+      "season": "Kamen Rider Gavv",
+      "tags": [
+        "Henshin-Change",
+        "Standby"
+      ],
+      "path": "/sounds/kamen-rider/ケーキング待機音テスト.mp3",
+      "thumbnailPath": "/sounds/kamen-rider/ケーキング待機音テスト 0-11 screenshot.png",
+      "description": "",
+      "source": "",
+      "wikiLink": ""
+    },
+    {
+      "id": "choco_form_gavv_20250409222811",
+      "title": "Choco Form Gavv",
+      "category": "Kamen Rider",
+      "season": "Kamen Rider Gavv",
+      "tags": [
+        "Henshin-Change"
+      ],
+      "path": "/sounds/kamen-rider/[現状最高音質] 仮面ライダーガヴ チョコダンフォーム 変身音 Kamen rider Gavv.mp3",
+      "thumbnailPath": "/sounds/kamen-rider/[現状最高音質] 仮面ライダーガヴ チョコダンフォーム 変身音 Kamen rider Gavv Chocodan Form Henshin sound [HQ] 0-28 screenshot.png",
+      "description": "",
+      "source": "",
+      "wikiLink": ""
+    },
+    {
+      "id": "kamen_rider_gavv_20250409223044",
+      "title": "Kamen Rider Gavv",
+      "category": "Kamen Rider",
+      "season": "Kamen Rider Gavv",
+      "tags": [
+        "Henshin-Change",
+        "Standby"
+      ],
+      "path": "/sounds/kamen-rider/待機音インスト(高音質版).mp3",
+      "thumbnailPath": "/sounds/kamen-rider/maxresdefault (1).jpg",
+      "description": "",
+      "source": "",
+      "wikiLink": ""
+    },
+    {
+      "id": "_gurucanform_20250409225242",
+      "title": " GurucanForm",
+      "category": "Kamen Rider",
+      "season": "Kamen Rider Gavv",
+      "tags": [
+        "Henshin-Change"
+      ],
+      "path": "/sounds/kamen-rider/[現状最高音質] 仮面ライダーガヴ グルキャンフォーム 変身音 Kamen rider Gavv.mp3",
+      "thumbnailPath": "/sounds/kamen-rider/[現状最高音質] 仮面ライダーガヴ グルキャンフォーム 変身音 Kamen rider Gavv GurucanForm Henshin sound [HQ] 0-30 screenshot.png",
+      "description": "",
+      "source": "",
+      "wikiLink": ""
+    },
+    {
+      "id": "fumallow_20250409231945",
+      "title": "Fumallow",
+      "category": "Kamen Rider",
+      "season": "Kamen Rider Gavv",
+      "tags": [
+        "Henshin-Change"
+      ],
+      "path": "/sounds/kamen-rider/[現状最高音質] 仮面ライダーガヴ ふわマロフォーム 変身音 Kamen rider Gavv Fu.mp3",
+      "thumbnailPath": "/sounds/kamen-rider/[現状最高音質] 仮面ライダーガヴ ふわマロフォーム 変身音 Kamen rider Gavv Fuwamallow Form Henshin sound [HQ]_maxresdefault.jpg",
       "description": "",
       "source": "",
       "wikiLink": ""
