@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Migration des données - TokuSounds</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #0f0f0f;
+            color: #fff;
+        }
+        .container {
+            background: #1a1a1a;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        h1 {
+            color: #4ade80;
+            margin-bottom: 10px;
+        }
+        .warning {
+            background: #fef3c7;
+            color: #92400e;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #f59e0b;
+        }
+        button {
+            background: #4ade80;
+            color: #000;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        button:hover {
+            background: #22c55e;
+            transform: translateY(-1px);
+        }
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            white-space: pre-wrap;
+        }
+        .success {
+            background: #065f46;
+            border: 1px solid #10b981;
+        }
+        .error {
+            background: #7f1d1d;
+            border: 1px solid #ef4444;
+        }
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #4ade80;
+            border-top-color: transparent;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔄 Migration des données</h1>
+        <p>Cet outil va migrer tous les sons du fichier <code>data.json</code> vers le nouveau système de fichiers JSON individuels.</p>
+        
+        <div class="warning">
+            <strong>⚠️ Important:</strong> Cette opération doit être effectuée <strong>UNE SEULE FOIS</strong>. 
+            Elle va créer un fichier JSON individuel pour chaque son dans le dossier <code>/data/validated/</code>.
+        </div>
+
+        <button id="migrateBtn" onclick="runMigration()">
+            Lancer la migration
+        </button>
+
+        <div id="result"></div>
+    </div>
+
+    <script>
+        async function runMigration() {
+            const btn = document.getElementById('migrateBtn');
+            const resultDiv = document.getElementById('result');
+            
+            btn.disabled = true;
+            resultDiv.innerHTML = '<div class="result"><span class="loading"></span>Migration en cours...</div>';
+            
+            try {
+                const response = await fetch('/api/migrate-data.php');
+                const data = await response.json();
+                
+                if (data.success) {
+                    resultDiv.innerHTML = `
+                        <div class="result success">
+                            <strong>✅ Migration réussie!</strong><br><br>
+                            <strong>Sons migrés:</strong> ${data.migrated} / ${data.total}<br>
+                            ${data.errors.length > 0 ? `<br><strong>Erreurs:</strong><br>${JSON.stringify(data.errors, null, 2)}` : ''}
+                        </div>
+                    `;
+                } else {
+                    throw new Error(data.error || 'Erreur inconnue');
+                }
+            } catch (error) {
+                resultDiv.innerHTML = `
+                    <div class="result error">
+                        <strong>❌ Erreur:</strong><br>
+                        ${error.message}
+                    </div>
+                `;
+                btn.disabled = false;
+            }
+        }
+    </script>
+</body>
+</html>

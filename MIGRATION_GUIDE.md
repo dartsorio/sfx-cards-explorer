@@ -43,39 +43,38 @@ Chaque son doit avoir son propre fichier JSON dans `/data/validated/`:
 
 1. **Soumission utilisateur**: Le formulaire envoie les données à `/api/submit-sound.php`
 2. **Fichiers créés**:
-   - JSON dans `/data/submissions/`
-   - Audio dans `/sounds/submissions/`
-   - Image dans `/images/sounds/submissions/`
+   - JSON dans `/data/submissions/` (avec nom identifiable: `Category_Season_Title_timestamp.json`)
+   - Audio **directement** dans `/sounds/[category]/` (nom: `season_title.mp3`)
+   - Image **directement** dans `/images/sounds/[category]/` (nom: `season_title.png`)
 3. **Validation manuelle**: 
    - Vérifiez le contenu dans `/data/submissions/`
-   - Si valide, déplacez les fichiers:
-     - JSON → `/data/validated/`
-     - Audio → `/sounds/[category]/`
-     - Image → `/images/sounds/[category]/`
-   - Mettez à jour les chemins dans le JSON
+   - Écoutez le son et vérifiez l'image (déjà au bon endroit)
+   - Si valide: **déplacez simplement le JSON** de `/data/submissions/` vers `/data/validated/`
+   - Si refusé: supprimez le JSON et les fichiers audio/image associés
 4. **Affichage automatique**: Le site charge automatiquement tous les JSON de `/data/validated/`
 
 ## Migration des données existantes
 
-Pour migrer le `data.json` actuel vers des fichiers individuels:
+Pour migrer le `data.json` actuel vers des fichiers individuels, **exécutez le script de migration** :
 
-```php
-<?php
-// Script de migration (à exécuter une seule fois)
-$dataJson = json_decode(file_get_contents('data.json'), true);
-
-foreach ($dataJson['sounds'] as $sound) {
-    $fileName = str_replace(' ', '_', $sound['category']) . '_' . 
-                str_replace(' ', '_', $sound['season']) . '_' . 
-                str_replace(' ', '_', $sound['title']) . '.json';
-    
-    file_put_contents(
-        'data/validated/' . $fileName,
-        json_encode($sound, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE)
-    );
-}
-?>
+### Option 1: Via navigateur (recommandé)
+Ouvrez dans votre navigateur:
 ```
+https://votresite.com/api/migrate-data.php
+```
+
+### Option 2: Via ligne de commande
+```bash
+php public/api/migrate-data.php
+```
+
+Le script va:
+- Lire tous les sons du `data.json`
+- Créer un fichier JSON individuel pour chaque son dans `/data/validated/`
+- Conserver tous les chemins existants (audio et images)
+- Afficher un rapport de migration (nombre de sons migrés, erreurs éventuelles)
+
+**Important**: Exécutez ce script **UNE SEULE FOIS** lors de la mise en place du nouveau système.
 
 ## Configuration serveur (cPanel / 02switch)
 

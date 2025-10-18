@@ -17,8 +17,8 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 
 // Configuration
 $uploadDir = __DIR__ . '/../../data/submissions/';
-$soundsDir = __DIR__ . '/../../sounds/submissions/';
-$imagesDir = __DIR__ . '/../../images/sounds/submissions/';
+$soundsDir = __DIR__ . '/../../sounds/';
+$imagesDir = __DIR__ . '/../../images/sounds/';
 
 // Créer les dossiers s'ils n'existent pas
 if (!file_exists($uploadDir)) mkdir($uploadDir, 0777, true);
@@ -62,8 +62,15 @@ try {
         throw new Exception('Audio file is too large. Maximum size is 10MB.');
     }
     
+    // Créer sous-dossier par catégorie
+    $categorySlug = strtolower(str_replace(' ', '-', $category));
+    $categorySoundsDir = $soundsDir . $categorySlug . '/';
+    if (!file_exists($categorySoundsDir)) {
+        mkdir($categorySoundsDir, 0777, true);
+    }
+    
     $audioFileName = $id . '.' . $audioExt;
-    $audioPath = $soundsDir . $audioFileName;
+    $audioPath = $categorySoundsDir . $audioFileName;
     
     if (!move_uploaded_file($audioFile['tmp_name'], $audioPath)) {
         throw new Exception('Failed to upload audio file');
@@ -84,14 +91,20 @@ try {
             throw new Exception('Image file is too large. Maximum size is 5MB.');
         }
         
+        // Créer sous-dossier par catégorie
+        $categoryImagesDir = $imagesDir . $categorySlug . '/';
+        if (!file_exists($categoryImagesDir)) {
+            mkdir($categoryImagesDir, 0777, true);
+        }
+        
         $imageFileName = $id . '.' . $imageExt;
-        $imagePath = $imagesDir . $imageFileName;
+        $imagePath = $categoryImagesDir . $imageFileName;
         
         if (!move_uploaded_file($imageFile['tmp_name'], $imagePath)) {
             throw new Exception('Failed to upload image file');
         }
         
-        $thumbnailPath = '/images/sounds/submissions/' . $imageFileName;
+        $thumbnailPath = '/images/sounds/' . $categorySlug . '/' . $imageFileName;
     }
     
     // Créer le JSON
@@ -101,7 +114,7 @@ try {
         'category' => $category,
         'season' => $season,
         'tags' => $tags,
-        'path' => '/sounds/submissions/' . $audioFileName,
+        'path' => '/sounds/' . $categorySlug . '/' . $audioFileName,
         'thumbnailPath' => $thumbnailPath,
         'description' => $description,
         'source' => $source,
