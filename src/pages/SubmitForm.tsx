@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useAppContext } from '@/lib/app-context';
-import { saveFormData } from '@/lib/data-utils';
+import { saveFormData, useCategoriesLoader } from '@/lib/data-utils';
 import Layout from '@/components/Layout';
 import { SoundFormData } from '@/types/types';
 import { Label } from '@/components/ui/label';
@@ -28,6 +28,7 @@ import { extractTags } from '@/lib/data-utils';
 
 const SubmitForm = () => {
   const { data } = useAppContext();
+  const { categories, loading: categoriesLoading } = useCategoriesLoader();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
@@ -44,7 +45,7 @@ const SubmitForm = () => {
     wikiLink: '',
   });
 
-  if (!data) {
+  if (!data || categoriesLoading) {
     return (
       <Layout>
         <div className="container mx-auto py-12">
@@ -182,7 +183,7 @@ const SubmitForm = () => {
     }
   };
 
-  const availableSeasons = data.categories
+  const availableSeasons = categories
     .find(cat => cat.name === formData.category)
     ?.seasons.map(season => season.name) || [];
 
@@ -231,7 +232,7 @@ const SubmitForm = () => {
                     <SelectValue placeholder="Select a category" />
                   </SelectTrigger>
                   <SelectContent>
-                    {data.categories.map((category) => (
+                    {categories.map((category) => (
                       <SelectItem key={category.name} value={category.name}>
                         {category.name}
                       </SelectItem>

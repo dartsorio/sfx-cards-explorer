@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from 'react';
-import { TokuData, Sound, Tag, FilterState, SoundFormData } from '@/types/types';
+import { TokuData, Sound, Tag, FilterState, SoundFormData, Category } from '@/types/types';
 import { toast } from '@/components/ui/use-toast';
 
 // Function to load data from the PHP API (dynamic JSON files)
@@ -36,6 +36,35 @@ export const useDataLoader = () => {
   }, []);
 
   return { data, loading, error };
+};
+
+// Function to load categories from the PHP API
+export const useCategoriesLoader = () => {
+  const [categories, setCategories] = useState<Category[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const loadCategories = async () => {
+      try {
+        const response = await fetch('/api/get-categories.php');
+        if (!response.ok) {
+          throw new Error('Failed to load categories from API');
+        }
+        const jsonData = await response.json();
+        setCategories(jsonData.categories || []);
+      } catch (err) {
+        console.error('Error loading categories:', err);
+        setError('Failed to load categories. Please try again later.');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadCategories();
+  }, []);
+
+  return { categories, loading, error };
 };
 
 // Function to filter sounds based on the current filter state
